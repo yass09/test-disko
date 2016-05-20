@@ -20,7 +20,7 @@ $(document).ready(function(){
   // Testing if using touchscreen mobile device, then use click
   if (Modernizr.touchevents){
     $(document).click(function () {
-        $(".loadingPage_text").html("Pour entrer tapper l'ecran");
+        $(".loadingPage_text").text("Pour entrer tapper l'ecran");
         alert("on mobile");
         $(".loadingPage").fadeOut("slow");
         playSound ();
