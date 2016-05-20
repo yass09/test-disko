@@ -1,0 +1,9 @@
+.loadingPage {
+  @include full-page;
+  @include container-center-column;
+  background-color:grey;
+
+  .loadingPage_text{
+    font-size: $title;    
+  }
+}
