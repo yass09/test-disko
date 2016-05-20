@@ -16,19 +16,11 @@ $(document).ready(function(){
         }
       };
 
-
-  // Testing if using touchscreen mobile device, then use click
-  if (Modernizr.touchevents){
-        alert("on mobile");
-    $(document).click(function () {
-        $(".loadingPage_text").text("Pour entrer tapper l'ecran");
+    $(document).konami(options).click(function () {
+        // $(".loadingPage_text").text("Pour entrer tapper l'ecran");
         $(".loadingPage").fadeOut("slow");
         playSound ();
     });
-  }
-// If using non-touchscreen device then use keyboard
-  else {
-    $('body').konami(options);
 
 
     // keydown(function (event) {
@@ -36,5 +28,4 @@ $(document).ready(function(){
     //     playSound ();
     //   console.log("keys pressed" + event.which);
     // });
-  };
 });
