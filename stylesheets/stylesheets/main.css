@@ -85,6 +85,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 6, ../sass/_loadingpage.scss */
 .loadingPage .loadingPage_text {
   font-size: 2em;
+  text-align: center;
 }
 
 /* line 13, ../sass/main.scss */
