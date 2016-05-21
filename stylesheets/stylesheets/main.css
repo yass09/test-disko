@@ -90,14 +90,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 10, ../sass/_loadingpage.scss */
 .loadingPage .loadingPage_text-indice {
   font-size: 1em;
+  margin: 10px 0;
 }
 
-/* line 15, ../sass/_loadingpage.scss */
+/* line 16, ../sass/_loadingpage.scss */
 .ryuImg_container-hidden {
   display: none;
 }
 
-/* line 19, ../sass/_loadingpage.scss */
+/* line 20, ../sass/_loadingpage.scss */
 .ryuImg_container {
   width: 100%;
   height: 100vh;
