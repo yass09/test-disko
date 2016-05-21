@@ -88,6 +88,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
 }
 
+/* line 12, ../sass/_loadingpage.scss */
+.ryuImg_container-hidden {
+  display: none;
+}
+
+/* line 16, ../sass/_loadingpage.scss */
+.ryuImg_container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 /* line 13, ../sass/main.scss */
 body {
   font-family: "Exo";

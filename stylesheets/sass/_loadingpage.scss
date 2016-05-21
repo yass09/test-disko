@@ -5,6 +5,15 @@
 
   .loadingPage_text{
     font-size: $title;
-    text-align: center;   
+    text-align: center;
   }
+}
+
+.ryuImg_container-hidden{
+  display: none;
+}
+
+.ryuImg_container{
+  @include full-page;
+  @include container-center-column;
 }

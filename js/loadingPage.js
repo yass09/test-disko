@@ -1,4 +1,4 @@
-// On page load, enter Konami Code to
+//Chargement de l'animation jquery de la loading/konami page
 $(document).ready(function(){
   // Variable pour appeler le fichier audio
   var audio = document.getElementById('SF2'),
@@ -14,23 +14,25 @@ $(document).ready(function(){
       options = {
         pattern: [40,39].join(""),
         onPatternMatch: function (e,data){
-          $(".loadingPage").fadeOut("slow");
+          $(".loadingPage").fadeOut("fast");
           playSound ();
           console.log("keys pressed: " + event.which);
         }
       },
   // fonctions pour faire apparaître les instructions
       addText = function () {
-        $(".loadingPage_text").append("<p>Sur smartphone, un tap suffira.</p>");
-      },
-      addText2 = function (a) {
-        $(".loadingPage_text").append("<p>OK, bon un click suffira sur desktop.</p>")
+        $(".loadingPage_text").append("<p>OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>")
       };
   // SetTimeout faisant apparaitre les instructions
-    setTimeout(addText,2000);
-    setTimeout(addText2,5000);
+    setTimeout(addText,5000);
+
+  // Initialisation du Konami code et alternative par click
     $(document).konami(options).click(function () {
-        $(".loadingPage").fadeOut("slow");
-        playSound ();
+        $(".loadingPage").fadeOut("fast");
+        $("#ryu-gif-container").toggleClass("ryuImg_container-hidden ryuImg_container");
+        setTimeout(playSound,2000);
+        setTimeout(function () {
+          $("#ryu-gif-container").fadeOut("fast")
+        },3500);
     });
 });
