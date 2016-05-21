@@ -25,6 +25,8 @@ $(document).ready(function(){
             screenWidth = $(window).width();
         if ( screenHeight > 740 || screenWidth > 415){
             $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>');
+        } else {
+          $(".loadingPage_text").after('<p class="loadingPage_text-indice"> Sur smartphone, un tap suffira.</p>')
         };
       };
   // SetTimeout faisant apparaitre les instructions
