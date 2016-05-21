@@ -21,7 +21,7 @@ $(document).ready(function(){
       },
   // fonctions pour faire apparaître les instructions
       addText = function () {
-        $(".loadingPage_text").append("<p>OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>");
+        $(".loadingPage_text").append('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>');
       };
   // SetTimeout faisant apparaitre les instructions
     setTimeout(addText,5000);
