@@ -21,7 +21,8 @@ $(document).ready(function(){
       },
   // fonctions pour faire apparaître les instructions
       addText = function () {
-        if ($(window).height() <= 740){
+        var screenHeight = $(window).height();
+        if ( screenHeight > 740){
             $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>');
         };
       };
