@@ -19,14 +19,14 @@ $(document).ready(function(){
           console.log("keys pressed: " + event.which);
         }
       },
-  // fonctions pour faire apparaître les instructions selon la taille de l'écran
+  // fonctions pour faire apparaître les instructions en fonction du device
       addText = function () {
         var screenHeight = $(window).height(),
             screenWidth = $(window).width();
         if ( screenHeight > 740 || screenWidth > 415){
-            $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira.</p>');
+            $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>');
         } else {
-          $(".loadingPage_text").text('<p class="loadingPage_text-indice"> Sur smartphone, un tap suffira.</p>');
+          $(".loadingPage_text").after('<p class="loadingPage_text-indice"> Sur smartphone, un tap suffira.</p>')
         };
       };
   // SetTimeout faisant apparaitre les instructions
