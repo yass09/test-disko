@@ -10,13 +10,16 @@
     <link rel="icon" href="favicon.ico" type="image/png">
     <!--  CSS Bootstrap  -->
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <!-- fontawesome lib -->
+    <script src="https://use.fontawesome.com/ed3f3786f2.js"></script>
     <!-- CSS custom -->
-    <link rel="stylesheet" href="stylesheets/main.css">
-    <!-- jquery lib  -->
+    <link rel="stylesheet" href="stylesheets/stylesheets/main.css">
+    <!-- jquery libs  -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+    <!-- jQuery Konami lib -->
     <script type="text/javascript" src="node_modules/jquery.konami/src/jquery.konami.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery-ui-1.11.4-3.custom/jquery-ui.min.js"></script>
+    <!-- GSAP lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/loadingPage.js"></script>
 
     <title>Test Frontend Disko</title>
@@ -41,8 +44,33 @@
       </div>
     </header>
     <nav class="menu">
-      
+      <i class="fa fa-bars menu-sm-hidden" aria-hidden="true"></i>
+      <ul class="menu_itemsContainer">
+        <li class="menu_item">Intro</li>
+        <li class="menu_item">Slide 1</li>
+        <li class="menu_item">Slide 2</li>
+        <li class="menu_item">Slide 3</li>
+      </ul>
     </nav>
+    <main class="main_container row">
+      <div class="main_slider col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+        <div class="main_slide main_slide-1 col-xs-12 col-sm-10 col-md-8">
+          <div class="main_slide-1-textContainer">
+            <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+            <p class="main_slide-1-text">Salut, voici une belle photo, parce qu'il faut en mettre une, et que je trouvais celle-ci jolie</p>
+            <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="main_slide main_slide-2 col-xs-12 col-sm-8 col-md-offset-2 col-md-8"></div>
+        <div class="main_slide main_slide-3 col-xs-12 col-sm-8 col-md-offset-2 col-md-8"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_header">
+        <p class="footer_headerText">&#169; YCDJ. mon Linked et mon github se cachent derrière d'autres KONAMI CODES.</p>
+      </div>
+      <div class="footer_content col-xs-12 col-sm-8 col-md-6"></div>
+    </footer>
 
   </body>
 </html>

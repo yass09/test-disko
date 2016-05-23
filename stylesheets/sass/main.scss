@@ -7,8 +7,8 @@
 @import "compass";
 @import "variables";
 @import "mixins";
-@import "compass/css3";
 @import "colors";
+@import "mediaqueries";
 @import "loadingpage";
 @import url(https://fonts.googleapis.com/css?family=Exo:400,700);
 
@@ -31,5 +31,82 @@ header{
   .header_img{
     width: 100px;
     margin: 10px;
+  }
+}
+// Propriétés de la navbar
+.menu{
+  @include container-center-row;
+  width: $full;
+  .menu-sm-hidden{
+    display: none;
+    font-size: 3em;
+  }
+  .menu_itemsContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    .menu_item{
+      padding: 0 10px;
+      border-right: 1px solid white;
+    }
+    // .menu_item:last-of-type{
+    //   border: none;
+    // }
+  }
+}
+
+// Propriétés du contenu principal:
+.main_container{
+  width: $full;
+  padding: 40px;
+  margin: 0;
+  .main_slider{
+    height: $slider-height;
+    background-color: blue;
+    padding: 0;
+    position: relative;
+  }
+  .main_slide{
+    width: $full;
+    height: $slider-height;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+  }
+  .main_slide-1{
+    background: url('../../img/jumpman-air-jordan-photo-shoot-poster.jpg') no-repeat center / cover;
+    .main_slide-1-textContainer{
+      @include container-center-row;
+      width: $full;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-size: 0.8em;
+      color: white;
+      background-color: lightgrey;
+      align-self: flex-end;
+
+    }
+  }
+
+}
+// Container du contenu(le slider)
+
+
+footer{
+  width: $full;
+  @include container-center-column;
+  .footer_header{
+    width: $full;
+    @include container-center-row;
+    .footer_headerText{
+      font-size: $regular / 1.5;
+      padding: 5px;
+    }
+  }
+  .footer_content{
+    height: 200px;
+    background-color: red;
   }
 }

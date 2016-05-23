@@ -8,5 +8,5 @@ gulp.task('default', function () {
 			browsers: ['last 3 versions'],
 			cascade: false
 		}))
-		.pipe(gulp.dest('stylesheets/'));
+		.pipe(gulp.dest('stylesheets/stylesheets/'));
 });
