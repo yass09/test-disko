@@ -13,6 +13,9 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:400,700);
 
 // Font à appliquer sur toute la page
+a{
+  text-decoration: none;
+}
 body{
   font-family: $main;
 }
@@ -22,6 +25,7 @@ header{
   @include container-center-row;
   flex-wrap: wrap;
   align-items: center;
+  padding: 20px;
 // Propriétés  du texte du header
   .header_title{
     font-size: $title;
@@ -30,29 +34,25 @@ header{
   // Taille de l'image du header
   .header_img{
     width: 100px;
-    margin: 10px;
+    margin: 0 10px;
   }
 }
 // Propriétés de la navbar
 .menu{
   @include container-center-row;
+  align-items: center;
   width: $full;
-  .menu-sm-hidden{
-    display: none;
-    font-size: 3em;
+  padding: 10px;
+  .menu_mobile{
+    font-size: 2em;
   }
-  .menu_itemsContainer{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
     .menu_item{
       padding: 0 10px;
       border-right: 1px solid white;
     }
-    // .menu_item:last-of-type{
-    //   border: none;
-    // }
-  }
+    .menu_item:last-of-type{
+      border: none;
+    }
 }
 
 // Propriétés du contenu principal:

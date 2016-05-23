@@ -1,3 +1,38 @@
-@media screen and (max-width:760px){
-  
+// Sur Tablette et smaller devices < 768px
+@media screen and (max-width:768px){
+  header{
+    text-align: center;
+  }
+  .menu{
+    position: relative;
+  }
+  .menu_mobile{
+    display: block;
+  }
+  .menu_itemsContainer{
+    display: none;
+    .menu_item{
+      border: none;
+      width: $full;
+      &:hover{
+        background-color: lightgrey;
+      }
+    }
+    &:focus{
+      display: flex;
+      flex-direction: column;
+      width: $full;
+      position: absolute;
+    }
+  }
+}
+
+// Sur ecran > tablette 768px
+@media screen and (min-width:769px) {
+  .menu_mobile{
+    display: none !important;
+  }
+  .menu_itemsContainer{
+    display: flex;
+  }
 }

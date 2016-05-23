@@ -9,9 +9,12 @@ body{
 .menu{
   color: white;
   background-color: black;
+  &:hover{
+    background-color: lightgrey;
+  }
 }
 
 .footer_header{
   background-color: black;
-    color: white;
+  color: white;
 }

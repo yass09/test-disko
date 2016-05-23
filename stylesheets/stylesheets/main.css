@@ -83,13 +83,71 @@ body {
   color: white;
   background-color: black;
 }
+/* line 12, ../sass/_colors.scss */
+.menu:hover {
+  background-color: lightgrey;
+}
 
-/* line 14, ../sass/_colors.scss */
+/* line 17, ../sass/_colors.scss */
 .footer_header {
   background-color: black;
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  /* line 3, ../sass/_mediaqueries.scss */
+  header {
+    text-align: center;
+  }
+
+  /* line 6, ../sass/_mediaqueries.scss */
+  .menu {
+    position: relative;
+  }
+
+  /* line 9, ../sass/_mediaqueries.scss */
+  .menu_mobile {
+    display: block;
+  }
+
+  /* line 12, ../sass/_mediaqueries.scss */
+  .menu_itemsContainer {
+    display: none;
+  }
+  /* line 14, ../sass/_mediaqueries.scss */
+  .menu_itemsContainer .menu_item {
+    border: none;
+    width: 100%;
+  }
+  /* line 17, ../sass/_mediaqueries.scss */
+  .menu_itemsContainer .menu_item:hover {
+    background-color: lightgrey;
+  }
+  /* line 21, ../sass/_mediaqueries.scss */
+  .menu_itemsContainer:focus {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 32, ../sass/_mediaqueries.scss */
+  .menu_mobile {
+    display: none !important;
+  }
+
+  /* line 35, ../sass/_mediaqueries.scss */
+  .menu_itemsContainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /* line 1, ../sass/_loadingpage.scss */
 .loadingPage {
   width: 100%;
@@ -144,11 +202,16 @@ body {
 }
 
 /* line 16, ../sass/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 19, ../sass/main.scss */
 body {
   font-family: "Exo";
 }
 
-/* line 21, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,19 +225,20 @@ header {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 20px;
 }
-/* line 26, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 header .header_title {
   font-size: 2em;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 header .header_img {
   width: 100px;
-  margin: 10px;
+  margin: 0 10px;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 .menu {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,27 +246,24 @@ header .header_img {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
-}
-/* line 40, ../sass/main.scss */
-.menu .menu-sm-hidden {
-  display: none;
-  font-size: 3em;
-}
-/* line 44, ../sass/main.scss */
-.menu .menu_itemsContainer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   padding: 10px;
 }
-/* line 48, ../sass/main.scss */
-.menu .menu_itemsContainer .menu_item {
+/* line 46, ../sass/main.scss */
+.menu .menu_mobile {
+  font-size: 2em;
+}
+/* line 49, ../sass/main.scss */
+.menu .menu_item {
   padding: 0 10px;
   border-right: 1px solid white;
+}
+/* line 53, ../sass/main.scss */
+.menu .menu_item:last-of-type {
+  border: none;
 }
 
 /* line 59, ../sass/main.scss */
@@ -252,8 +313,8 @@ header .header_img {
   font-size: 0.8em;
   color: white;
   background-color: lightgrey;
-  -ms-flex-item-align: end;
   -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 
