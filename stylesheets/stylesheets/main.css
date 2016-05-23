@@ -83,10 +83,6 @@ body {
   color: white;
   background-color: black;
 }
-/* line 12, ../sass/_colors.scss */
-.menu:hover {
-  background-color: lightgrey;
-}
 
 /* line 17, ../sass/_colors.scss */
 .footer_header {
@@ -100,69 +96,51 @@ body {
     text-align: center;
   }
 
-  /* line 6, ../sass/_mediaqueries.scss */
-  .menu {
-    position: relative;
-  }
-
-  /* line 9, ../sass/_mediaqueries.scss */
-  .menu_mobile {
-    display: block;
-  }
-
-  /* line 12, ../sass/_mediaqueries.scss */
+  /* line 7, ../sass/_mediaqueries.scss */
   .menu_itemsContainer {
     display: none;
   }
+
+  /* line 10, ../sass/_mediaqueries.scss */
+  .menu_mobile {
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
   /* line 14, ../sass/_mediaqueries.scss */
-  .menu_itemsContainer .menu_item {
-    border: none;
-    width: 100%;
+  .menu_item-mobile {
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
   }
-  /* line 17, ../sass/_mediaqueries.scss */
-  .menu_itemsContainer .menu_item:hover {
-    background-color: lightgrey;
-  }
-  /* line 21, ../sass/_mediaqueries.scss */
-  .menu_itemsContainer:focus {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+
+  /* line 20, ../sass/_mediaqueries.scss */
+  .menu_item-mobile-open {
+    opacity: 1;
+    height: 25px;
+    padding: 5px;
     width: 100%;
-    position: absolute;
+    transition: all 0.5s ease-in-out;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 32, ../sass/_mediaqueries.scss */
+  /* line 33, ../sass/_mediaqueries.scss */
   .menu_mobile {
     display: none !important;
   }
 
-  /* line 35, ../sass/_mediaqueries.scss */
-  .menu_itemsContainer {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  /* line 36, ../sass/_mediaqueries.scss */
+  .menu_item {
+    display: inline;
   }
 }
 /* line 1, ../sass/_loadingpage.scss */
 .loadingPage {
   width: 100%;
   height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: grey;
 }
@@ -187,169 +165,146 @@ body {
 .ryuImg_container {
   width: 100%;
   height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 /* line 16, ../sass/main.scss */
 a {
+  color: white;
+}
+/* line 18, ../sass/main.scss */
+a:hover {
+  color: white;
   text-decoration: none;
 }
 
-/* line 19, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 body {
   font-family: "Exo";
 }
 
-/* line 24, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
+.content {
+  display: none;
+}
+
+/* line 31, ../sass/main.scss */
 header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 20px;
 }
-/* line 30, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 header .header_title {
   font-size: 2em;
   margin-bottom: 10px;
 }
-/* line 35, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 header .header_img {
   width: 100px;
   margin: 0 10px;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .menu {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
 }
-/* line 46, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
+.menu .menu_itemsContainer {
+  text-align: center;
+}
+/* line 54, ../sass/main.scss */
 .menu .menu_mobile {
-  font-size: 2em;
+  text-align: center;
+  position: relative;
 }
-/* line 49, ../sass/main.scss */
-.menu .menu_item {
+/* line 57, ../sass/main.scss */
+.menu .menu_mobile .menu_mobileIcon {
+  font-size: 1.5em;
+}
+/* line 60, ../sass/main.scss */
+.menu .menu_mobile .menu_item-mobile {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 66, ../sass/main.scss */
+.menu_item {
   padding: 0 10px;
   border-right: 1px solid white;
 }
-/* line 53, ../sass/main.scss */
-.menu .menu_item:last-of-type {
+
+/* line 70, ../sass/main.scss */
+.menu_item:last-of-type {
   border: none;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .main_container {
   width: 100%;
   padding: 40px;
   margin: 0;
+  background-color: lightblue;
 }
-/* line 63, ../sass/main.scss */
+/* line 80, ../sass/main.scss */
 .main_container .main_slider {
   height: 50vh;
   background-color: blue;
   padding: 0;
   position: relative;
 }
-/* line 69, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 .main_container .main_slide {
   width: 100%;
   height: 50vh;
   padding: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   overflow: hidden;
 }
-/* line 77, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .main_container .main_slide-1 {
   background: url("../../img/jumpman-air-jordan-photo-shoot-poster.jpg") no-repeat center/cover;
 }
-/* line 79, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 .main_container .main_slide-1 .main_slide-1-textContainer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 20px;
   font-size: 0.8em;
   color: white;
   background-color: lightgrey;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 footer {
   width: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-/* line 100, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 footer .footer_header {
   width: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
-/* line 103, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 footer .footer_header .footer_headerText {
   font-size: 0.66667em;
   padding: 5px;
 }
-/* line 108, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 footer .footer_content {
   height: 200px;
   background-color: red;

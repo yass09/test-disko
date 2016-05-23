@@ -13,19 +13,20 @@ $(document).ready(function(){
 // SetTimeout faisant apparaitre les instructions
   setTimeout(addText,5000);
 
-  // Variable pour appeler le fichier audio
-  var audio = $('#SF2'),
+  // Variable pour appeler le fichier audio,
+  var audio = $("#SF2"),
   // Fonction pour lancer l'audio
       playSound = function () {
-        if (!$("audio").hasClass("played")){
-          audio.play();
-          $("audio").addClass("played");
+        if (audio.hasClass("played")){
+          audio[0].play();
+          audio.addClass("played");
         }
       },
 
       // Fonctions concernant l'animation
       fadeGif = function () {
-        $("#ryu-gif-container").fadeOut("fast")
+        $("#ryu-gif-container").fadeOut("fast");
+        $(".content").toggleClass('content');
       },
 
       ryuAnimation = function (e,data){
@@ -47,5 +48,6 @@ $(document).ready(function(){
   // Initialisation du Konami code et alternative par click
     $(document).konami(options).click(function () {
         $(".loadingPage").fadeOut("fast").promise().done(ryuAnimation);
+
     });
   });
