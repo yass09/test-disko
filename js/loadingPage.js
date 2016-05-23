@@ -14,7 +14,7 @@ $(document).ready(function(){
   setTimeout(addText,5000);
 
   // Variable pour appeler le fichier audio
-  var audio = document.getElementById('SF2'),
+  var audio = $('#SF2'),
   // Fonction pour lancer l'audio
       playSound = function () {
         if (!$("audio").hasClass("played")){

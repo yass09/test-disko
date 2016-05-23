@@ -78,13 +78,33 @@ body {
   color: lightgrey;
 }
 
+/* line 9, ../sass/_colors.scss */
+.menu {
+  color: white;
+  background-color: black;
+}
+
+/* line 14, ../sass/_colors.scss */
+.footer_header {
+  background-color: black;
+  color: white;
+}
+
 /* line 1, ../sass/_loadingpage.scss */
 .loadingPage {
   width: 100%;
   height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: grey;
 }
@@ -109,9 +129,17 @@ body {
 .ryuImg_container {
   width: 100%;
   height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -122,9 +150,17 @@ body {
 
 /* line 21, ../sass/main.scss */
 header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 /* line 26, ../sass/main.scss */
@@ -136,4 +172,124 @@ header .header_title {
 header .header_img {
   width: 100px;
   margin: 10px;
+}
+
+/* line 37, ../sass/main.scss */
+.menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+/* line 40, ../sass/main.scss */
+.menu .menu-sm-hidden {
+  display: none;
+  font-size: 3em;
+}
+/* line 44, ../sass/main.scss */
+.menu .menu_itemsContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 10px;
+}
+/* line 48, ../sass/main.scss */
+.menu .menu_itemsContainer .menu_item {
+  padding: 0 10px;
+  border-right: 1px solid white;
+}
+
+/* line 59, ../sass/main.scss */
+.main_container {
+  width: 100%;
+  padding: 40px;
+  margin: 0;
+}
+/* line 63, ../sass/main.scss */
+.main_container .main_slider {
+  height: 50vh;
+  background-color: blue;
+  padding: 0;
+  position: relative;
+}
+/* line 69, ../sass/main.scss */
+.main_container .main_slide {
+  width: 100%;
+  height: 50vh;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+/* line 77, ../sass/main.scss */
+.main_container .main_slide-1 {
+  background: url("../../img/jumpman-air-jordan-photo-shoot-poster.jpg") no-repeat center/cover;
+}
+/* line 79, ../sass/main.scss */
+.main_container .main_slide-1 .main_slide-1-textContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 0.8em;
+  color: white;
+  background-color: lightgrey;
+  -ms-flex-item-align: end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+/* line 97, ../sass/main.scss */
+footer {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* line 100, ../sass/main.scss */
+footer .footer_header {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+/* line 103, ../sass/main.scss */
+footer .footer_header .footer_headerText {
+  font-size: 0.66667em;
+  padding: 5px;
+}
+/* line 108, ../sass/main.scss */
+footer .footer_content {
+  height: 200px;
+  background-color: red;
 }
