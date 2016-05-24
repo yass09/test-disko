@@ -1,39 +1,45 @@
 //Chargement de l'animation jquery de la loading/konami page
 $(document).ready(function(){
-// fonctions pour faire apparaître les instructions en fonction du device
-  var addText = function () {
-    var screenHeight = $(window).height(),
-        screenWidth = $(window).width();
-    if ( screenHeight > 740 || screenWidth > 415){
-        $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira sur desktop aussi.</p>');
-    } else {
-      $(".loadingPage_text").after('<p class="loadingPage_text-indice"> Sur smartphone, un tap suffira.</p>');
-    };
-  };
-// SetTimeout faisant apparaitre les instructions
-  setTimeout(addText,5000);
-
-  // Variable pour appeler le fichier audio,
-  var audio = $("#SF2"),
+  var $audio = $('audio'),
   // Fonction pour lancer l'audio
       playSound = function () {
-        if (audio.hasClass("played")){
-          audio[0].play();
-          audio.addClass("played");
+        if ($audio.hasClass("played")){
+          $audio[0].play();
+          $audio.addClass("played");
         }
       },
+      screenHeight = $(window).height(),
+      screenWidth = $(window).width(),
+
+// fonctions pour faire apparaître les instructions sur desktop
+      addTextDesktop = function () {
+    if ( screenHeight > 740 && screenWidth > 768){
+        $(".loadingPage_text").after('<p class="loadingPage_text-indice"> OK, bon si vous ne trouvez pas, un click suffira.</p>');
+    };
+  };
+  // fonctions pour faire apparaître les instructions sur mobile/tablette
+      addTextMobile = function () {
+        if ( screenHeight < 740 || screenWidth < 768){
+         $(".loadingPage_text").after('<p class="loadingPage_text-indice"> Sur smartphone, un tap suffira.</p>');
+       };
+     };
+
+// SetTimeout faisant apparaitre les instructions
+  setTimeout(addTextDesktop,5000);
+  setTimeout(addTextMobile,5000);
+  // Variable pour appeler le fichier audio,
 
       // Fonctions concernant l'animation
-      fadeGif = function () {
-        $("#ryu-gif-container").fadeOut("fast");
-        $(".content").toggleClass('content');
-      },
+    var fadeGif = function () {
+      $("#ryu-gif-container").fadeOut("fast");
+      $(".content").toggleClass('content');
+    },
 
-      ryuAnimation = function (e,data){
-        $("#ryu-gif-container").toggleClass("ryuImg_container-hidden ryuImg_container");
-        setTimeout(playSound,2000);
-        setTimeout(fadeGif,3500);
-      },
+    ryuAnimation = function (e,data){
+      $("#ryu-gif-container").toggleClass("ryuImg_container-hidden ryuImg_container");
+      setTimeout(playSound,2000);
+      setTimeout(fadeGif,3500);
+    },
 
   // Declaration du Konami code
   // Options contient le code a effectuer et la fonction déclenchée par le code

@@ -1,5 +1,5 @@
 .loadingPage {
-  @include full-page;
+  @include full;
   @include container-center-column;
   background-color:grey;
 
@@ -19,6 +19,6 @@
 }
 
 .ryuImg_container{
-  @include full-page;
+  @include full;
   @include container-center-column;
 }

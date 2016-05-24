@@ -174,24 +174,30 @@ body {
 /* line 16, ../sass/main.scss */
 a {
   color: white;
+  text-decoration: none;
 }
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 body {
   font-family: "Exo";
 }
 
-/* line 26, ../sass/main.scss */
+/* line 27, ../sass/main.scss */
+.loadingPage_logo {
+  width: 20%;
+}
+
+/* line 31, ../sass/main.scss */
 .content {
   display: none;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 header {
   display: flex;
   justify-content: center;
@@ -199,93 +205,66 @@ header {
   align-items: center;
   padding: 20px;
 }
-/* line 37, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 header .header_title {
   font-size: 2em;
   margin-bottom: 10px;
 }
-/* line 42, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 header .header_img {
   width: 100px;
   margin: 0 10px;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 .menu {
   width: 100%;
   padding: 10px 0;
 }
-/* line 51, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 .menu .menu_itemsContainer {
   text-align: center;
 }
-/* line 54, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 .menu .menu_mobile {
   text-align: center;
   position: relative;
 }
-/* line 57, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .menu .menu_mobile .menu_mobileIcon {
   font-size: 1.5em;
 }
-/* line 60, ../sass/main.scss */
-.menu .menu_mobile .menu_item-mobile {
-  background: rgba(0, 0, 0, 0.7);
-}
 
-/* line 66, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 .menu_item {
   padding: 0 10px;
   border-right: 1px solid white;
 }
 
-/* line 70, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 .menu_item:last-of-type {
   border: none;
 }
 
-/* line 75, ../sass/main.scss */
-.main_container {
-  width: 100%;
-  padding: 40px;
-  margin: 0;
-  background-color: lightblue;
+/* line 77, ../sass/main.scss */
+main {
+  padding: 3%;
 }
-/* line 80, ../sass/main.scss */
-.main_container .main_slider {
+/* line 79, ../sass/main.scss */
+main .container {
   height: 50vh;
-  background-color: blue;
-  padding: 0;
-  position: relative;
 }
-/* line 86, ../sass/main.scss */
-.main_container .main_slide {
-  width: 100%;
+/* line 81, ../sass/main.scss */
+main .container .carousel-inner {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* line 83, ../sass/main.scss */
+main .container .carousel-inner .slide_content {
   height: 50vh;
-  padding: 0;
-  display: flex;
-  position: absolute;
-  overflow: hidden;
-}
-/* line 94, ../sass/main.scss */
-.main_container .main_slide-1 {
-  background: url("../../img/jumpman-air-jordan-photo-shoot-poster.jpg") no-repeat center/cover;
-}
-/* line 96, ../sass/main.scss */
-.main_container .main_slide-1 .main_slide-1-textContainer {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  font-size: 0.8em;
-  color: white;
-  background-color: lightgrey;
-  align-self: flex-end;
 }
 
-/* line 114, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 footer {
   width: 100%;
   display: flex;
@@ -293,18 +272,18 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-/* line 117, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 footer .footer_header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* line 120, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 footer .footer_header .footer_headerText {
   font-size: 0.66667em;
   padding: 5px;
 }
-/* line 125, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 footer .footer_content {
   height: 200px;
   background-color: red;

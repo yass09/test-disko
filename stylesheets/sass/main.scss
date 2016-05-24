@@ -15,6 +15,7 @@
 // Font à appliquer sur toute la page
 a{
   color: white;
+  text-decoration: none;
   &:hover{
     color: white;
     text-decoration: none;
@@ -23,6 +24,10 @@ a{
 body{
   font-family: $main;
 }
+.loadingPage_logo{
+  width: 20%;
+}
+
 .content{
   display: none;
 }
@@ -57,9 +62,6 @@ header{
     .menu_mobileIcon{
       font-size: 1.5em;
     }
-    .menu_item-mobile{
-      background:rgba(0,0,0,0.7)
-    }
   }
 }
 
@@ -72,43 +74,20 @@ header{
 }
 
 // Propriétés du contenu principal:
-.main_container{
-  width: $full;
-  padding: 40px;
-  margin: 0;
-  background-color: lightblue;
-  .main_slider{
+main{
+  padding: 3%;
+  .container{
     height: $slider-height;
-    background-color: blue;
-    padding: 0;
-    position: relative;
-  }
-  .main_slide{
-    width: $full;
-    height: $slider-height;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    overflow: hidden;
-  }
-  .main_slide-1{
-    background: url('../../img/jumpman-air-jordan-photo-shoot-poster.jpg') no-repeat center / cover;
-    .main_slide-1-textContainer{
-      @include container-center-row;
-      width: $full;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      font-size: 0.8em;
-      color: white;
-      background-color: lightgrey;
-      align-self: flex-end;
-
+    .carousel-inner{
+      background: rgba(0,0,0,0.7);
+      .slide_content{
+        height: $slider-height;
+        width: $full;
+      }
     }
-  }
 
+  }
 }
-// Container du contenu(le slider)
 
 
 footer{
