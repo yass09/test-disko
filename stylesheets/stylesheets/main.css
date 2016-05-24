@@ -150,6 +150,11 @@ body {
   }
 
   /* line 49, ../sass/_mediaqueries.scss */
+  .footer_contentImg {
+    float: left;
+  }
+
+  /* line 52, ../sass/_mediaqueries.scss */
   .footer_contentText {
     float: right;
   }
@@ -185,10 +190,11 @@ body {
 .ryuImg_container {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+}
+/* line 23, ../sass/_loadingpage.scss */
+.ryuImg_container .ryuImg {
+  width: 100%;
+  height: 100vh;
 }
 
 /* line 16, ../sass/main.scss */
@@ -270,46 +276,57 @@ header .header_img {
 main {
   padding: 3%;
 }
-/* line 82, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 main .container {
   height: 50vh;
 }
-/* line 84, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 main .container .carousel-inner {
   background: rgba(0, 0, 0, 0.7);
+  height: 50vh;
 }
-/* line 86, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 main .container .carousel-inner .slide_content {
   height: 50vh;
   width: 100%;
   text-align: center;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
+.row {
+  margin: 0;
+}
+
+/* line 98, ../sass/main.scss */
 footer {
   width: 100%;
 }
-/* line 99, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 footer .footer_header {
   width: 100%;
 }
-/* line 101, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 footer .footer_header .footer_headerText {
   font-size: 0.66667em;
   padding: 5px;
   text-align: center;
 }
-/* line 107, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 footer .footer_content {
   width: 100%;
 }
-/* line 109, ../sass/main.scss */
-footer .footer_content .footer_contentText {
-  text-align: left;
-  padding: 30px;
+/* line 110, ../sass/main.scss */
+footer .footer_content .footer_contentImg {
+  background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
+  height: 250px;
 }
-/* line 112, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
+footer .footer_content .footer_contentText {
+  padding: 20px;
+}
+/* line 116, ../sass/main.scss */
 footer .footer_content .footer_contentText .footer_contentTitle {
   margin-bottom: 10px;
   font-size: 1.33333em;
+  font-weight: 700;
 }

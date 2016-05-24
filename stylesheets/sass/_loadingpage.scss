@@ -20,5 +20,7 @@
 
 .ryuImg_container{
   @include full;
-  @include container-center-column;
+  .ryuImg{
+    @include full;
+  }
 }

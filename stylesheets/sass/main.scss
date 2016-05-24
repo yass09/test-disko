@@ -76,13 +76,11 @@ header{
 // Propriétés du contenu principal:
 main{
   padding: 3%;
-  .row{
-  // margin: 0;
-  }
   .container{
     height: $slider-height;
     .carousel-inner{
       background: rgba(0,0,0,0.7);
+      height: $slider-height;
       .slide_content{
         height: $slider-height;
         width: $full;
@@ -91,6 +89,9 @@ main{
     }
 
   }
+}
+.row{
+margin: 0;
 }
 
 
@@ -106,12 +107,16 @@ footer{
   }
   .footer_content{
     width: $full;
+    .footer_contentImg{
+      background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top / cover;
+      height: 250px;
+    }
     .footer_contentText{
-      text-align: left;
-      padding: 30px;
+      padding: 20px;
       .footer_contentTitle{
         margin-bottom: 10px;
         font-size: $title / 1.5;
+        font-weight: 700;
       }
     }
   }
