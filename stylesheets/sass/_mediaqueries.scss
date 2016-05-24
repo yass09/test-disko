@@ -29,7 +29,7 @@
     width: $full;
   }
   .footer_contentText{
-      float: none;
+    float: none;
   }
 }
 
@@ -47,11 +47,6 @@
     width: $full/2;
   }
   .footer_contentText{
-      float: right;
-      .footer_contentTitle{
-        text-decoration: underline;
-        margin-bottom: 10px;
-        font-size: $title / 1.5;
-      }
+    float: right;
   }
 }

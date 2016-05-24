@@ -153,12 +153,6 @@ body {
   .footer_contentText {
     float: right;
   }
-  /* line 51, ../sass/_mediaqueries.scss */
-  .footer_contentText .footer_contentTitle {
-    text-decoration: underline;
-    margin-bottom: 10px;
-    font-size: 1.33333em;
-  }
 }
 /* line 1, ../sass/_loadingpage.scss */
 .loadingPage {
@@ -313,4 +307,9 @@ footer .footer_content {
 footer .footer_content .footer_contentText {
   text-align: left;
   padding: 30px;
+}
+/* line 112, ../sass/main.scss */
+footer .footer_content .footer_contentText .footer_contentTitle {
+  margin-bottom: 10px;
+  font-size: 1.33333em;
 }

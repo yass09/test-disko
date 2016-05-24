@@ -31,17 +31,17 @@
 
   <body>
 <!-- Loading page div qui apparait avant le chargement de la maquette -->
-  <!-- <div class="loadingPage">
+  <div class="loadingPage">
     <img class="loadingPage_logo" src="img/logo_diskoEDIT.png" alt="logo agence Diko" />
     <p class="loadingPage_text">Pour entrer, un indice: "Hadoken!".</p>
     <audio id="SF2" src="src/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3" type="audio/mpeg"></audio>
-  </div> -->
+  </div>
   <!-- 2eme partie de la loading page contenant le gif animé -->
-  <!-- <div id="ryu-gif-container" class="ryuImg_container-hidden">
+  <div id="ryu-gif-container" class="ryuImg_container-hidden">
     <img src="img/supersfiiopryub.gif" alt="gif animé Ryu" />
-  </div> -->
+  </div>
   <!-- Div contenant la page principal à afficher apres l'animation de la loading page -->
-  <!-- <div class="content">  -->
+  <div class="content">
 <!-- En-tête avec le logo et le titre de la page -->
     <header>
       <a href="#"><img class="header_img" src="img/logo_diskoEDIT.png" alt="logo Disko homepage" /></a>
@@ -60,7 +60,7 @@
           <li class="menu_item-mobile">Slide 2</li>
           <li class="menu_item-mobile">Slide 3</li>
         </ul>
-        <!-- Navbar visible en format desktop -->
+      <!-- Navbar visible en format desktop -->
       <ul class="menu_itemsContainer">
         <li class="menu_item"><a href="#">Intro</a></li>
         <li class="menu_item">Slide 1</li>
@@ -68,22 +68,24 @@
         <li class="menu_item">Slide 3</li>
       </ul>
     </nav>
-<!-- Contenu Principal, Container du slider avec le Canvas, formulaire et profil  -->
+    <!-- Contenu Principal, Container du slider avec le Canvas, formulaire et profil  -->
     <main class="row">
       <div class="container col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
         <div id="myCarousel" class="carousel slide">
-          <!-- Indicators -->
+          <!-- Items indiquant quels slides afficher -->
           <ol class="carousel-indicators">
             <li class="item1 active"></li>
             <li class="item2"></li>
             <li class="item3"></li>
           </ol>
 
-          <!-- Wrapper for slides -->
+          <!-- Container global des slides -->
           <div class="carousel-inner" role="listbox">
-
+            <!-- Container de chaque slide -->
             <div class="item active">
+              <!-- Contenu des slide -->
               <img class="slide_content" src="img/jumpman-air-jordan-photo-shoot-poster.jpg" alt="Michael Jordan">
+              <!-- Text affiché sur le premier slide -->
               <div class="carousel-caption">
                 <h3>MJ</h3>
                 <p>Salut, voici une belle photo, parce qu'il faut en mettre une, et que je trouvais celle-ci jolie</p>
@@ -102,35 +104,37 @@
 
           </div>
 
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    </main>
-      <footer>
-        <div class="footer_header">
-          <p class="footer_headerText">&#169; YCDJ. mon Linked et mon github se cachent derrière d'autres KONAMI CODES.</p>
-        </div>
-        <div class="footer_content">
-          <img class="footer_contentDivs" src="img/635977562108560005-679443365_kobe.jpg" alt="Kobe Bryant">
-          <div class="footer_contentDivs footer_contentText">
-            <h1 class="footer_contentTitle">A propos</h1>
-            <p>
-              Voici donc un petit paragraphe me concernant. Ce sont mon appétence pour le front et l'aspect visuel du web qui m'ont amené jusqu'à vous. <br><br>J'ai choisi cette photo de Kobe Bryant car, comme mentionné plus tôt, j'adore le basketball, mais c'est surtout parce qu'il incarne le travail et la persévérence. Ce sont des qualités clairement indispensbles pour évoluer comme développeur et qui m'auront été nécessaires pour arriver au bout de ce test! <br><br>
-              J'espère maintenant que la suite sera favorable car je souhaite vivement vous rejoindre!
-            </p>
+          <!-- Fleches permettant de naviguer dans les slides -->
+            <a class="left carousel-control" href="#myCarousel" role="button">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
-      </footer>
-    <!-- </div> -->
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <!-- Entete du Footer (bande noir avec texte blanc) -->
+      <div class="footer_header">
+        <p class="footer_headerText">&#169; YCDJ. mon Linked et mon github se cachent derrière d'autres KONAMI CODES.</p>
+      </div>
+      <!-- Container de l'image et du texte -->
+      <div class="footer_content">
+        <img class="footer_contentDivs" src="img/635977562108560005-679443365_kobe.jpg" alt="Kobe Bryant">
+        <div class="footer_contentDivs footer_contentText">
+          <h1 class="footer_contentTitle">A propos</h1>
+          <p>
+            Voici donc un petit paragraphe me concernant. Ce sont mon appétence pour le front et l'aspect visuel du web qui m'ont amené jusqu'à vous. <br><br>J'ai choisi cette photo de Kobe Bryant car, comme mentionné plus tôt, j'adore le basketball, mais c'est surtout parce qu'il incarne le travail et la persévérence. Ce sont des qualités clairement indispensbles pour évoluer comme développeur et qui m'auront été nécessaires pour arriver au bout de ce test! <br><br>
+            J'espère maintenant que la suite sera favorable car je souhaite vivement vous rejoindre!
+          </p>
+        </div>
+      </div>
+    </footer>
+    </div>
   </body>
 </html>

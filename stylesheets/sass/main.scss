@@ -110,7 +110,8 @@ footer{
       text-align: left;
       padding: 30px;
       .footer_contentTitle{
-
+        margin-bottom: 10px;
+        font-size: $title / 1.5;
       }
     }
   }
