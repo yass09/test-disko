@@ -31,23 +31,27 @@
 
   <body>
 <!-- Loading page div qui apparait avant le chargement de la maquette -->
-  <div class="loadingPage">
-    <img class="loadingPage_logo" src="img/logo_diskoEDIT.png" alt="logo agence Diko" />
-    <p class="loadingPage_text">Pour entrer, un indice: "Hadoken!".</p>
-    <audio id="SF2" src="src/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3" type="audio/mpeg"></audio>
-  </div>
+  <!-- <div class="loadingPage">
+    <div class="loadingPage_content">
+      <img class="loadingPage_logo" src="img/logo_diskoEDIT.png" alt="logo agence Diko" />
+      <p class="loadingPage_text">Pour entrer, un indice: "Hadoken!".</p>
+      <audio id="SF2" src="src/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3" type="audio/mpeg"></audio>
+    </div>
+  </div> -->
   <!-- 2eme partie de la loading page contenant le gif animé -->
-  <div id="ryu-gif-container" class="ryuImg_container-hidden">
+  <!-- <div id="ryu-gif-container" class="ryuImg_container-hidden">
     <img class="ryuImg" src="img/supersfiiopryub.gif" alt="gif animé Ryu" />
-  </div>
+  </div> -->
   <!-- Div contenant la page principal à afficher apres l'animation de la loading page -->
-  <div class="content">
+  <!-- <div class="content"> -->
 <!-- En-tête avec le logo et le titre de la page -->
     <header>
-      <a href="#"><img class="header_img" src="img/logo_diskoEDIT.png" alt="logo Disko homepage" /></a>
-      <div class="header_titleContainer">
-        <p class="header_title">Bienvenue sur ma version du test Frontend Disko</p>
-        <p class="header_subTitle">Par Yacine Chibane-De Jésus</p>
+      <div class="header_container">
+        <a href="#"><img class="header_img" src="img/logo_diskoEDIT.png" alt="logo Disko homepage" /></a>
+        <div class="header_titleContainer">
+          <p class="header_title">Bienvenue sur ma version du test Frontend Disko</p>
+          <p class="header_subTitle">Par Yacine Chibane-De Jésus</p>
+        </div>
       </div>
     </header>
     <!-- Navbar -->
@@ -82,34 +86,36 @@
           <!-- Container global des slides -->
           <div class="carousel-inner" role="listbox">
             <!-- Container de chaque slide -->
-            <div class="item active">
+            <div class="item active item-1">
               <!-- Contenu des slide -->
-              <img class="slide_content" src="img/jumpman-air-jordan-photo-shoot-poster.jpg" alt="Michael Jordan">
               <!-- Text affiché sur le premier slide -->
               <div class="carousel-caption">
-                <h3>MJ</h3>
-                <p>Salut, voici une belle photo, parce qu'il faut en mettre une, et que je trouvais celle-ci jolie</p>
+                <h3>MJ</h3><br>
+                <p>Voici une belle photo parce qu'il faut en mettre une, et qu'elle illustre certaines de mes passions</p>
               </div>
             </div>
 
-            <div class="item">
+            <div class="item item-2">
               <canvas id="canvas" class="slide_content"></canvas>
             </div>
 
-            <div class="item">
+            <div class="item item-3">
               <div class="slide_content">
-                <input type="text" name="name" value="">
-                <textarea name="name" rows="8" cols="40"></textarea>
+                <span class="input input--minoru">
+        					<input class="input__field input__field--yoko" type="text" id="input-16" />
+        					<label class="input__label input__label--yoko" for="input-16">
+        						<span class="input__label-content input__label-content--yoko">Votre texte</span>
+        					</label>
+        				</span>
+              </div>
             </div>
 
-          </div>
-
           <!-- Fleches permettant de naviguer dans les slides -->
-            <a class="left carousel-control" href="#myCarousel" role="button">
+            <a class="left carousel-control" href="#" role="button">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarousel" role="button">
+            <a class="right carousel-control" href="#" role="button">
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -127,7 +133,7 @@
       <div class="footer_content">
         <div class="footer_contentDivs footer_contentImg"></div>
         <div class="footer_contentDivs footer_contentText">
-          <h1 class="footer_contentTitle">A propos</h1>
+          <h2 class="footer_contentTitle">A propos</h2>
           <p>
             Voici donc un petit paragraphe me concernant. C'est mon appétence pour le front-end web qui m'ont amené jusqu'à vous. <br><br>J'ai choisi cette photo de Kobe Bryant car, comme on peut le voir, j'adore le basketball, mais c'est surtout parce qu'il incarne le travail et la persévérence. Ce sont des qualités clairement indispensbles pour évoluer comme développeur et qui m'auront été nécessaires pour arriver au bout de ce test! <br><br>
             J'espère maintenant que la suite sera favorable car je souhaite vivement vous rejoindre!

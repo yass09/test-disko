@@ -1,16 +1,23 @@
 .loadingPage {
   @include full;
-  @include container-center-column;
+  // @include container-center-column;
   background-color:grey;
-
-  .loadingPage_text{
-    font-size: $title;
+  position: relative;
+  .loadingPage_content{
+    @include centerIE;
     text-align: center;
-  }
-  .loadingPage_text-indice{
-    font-size: $regular;
-    margin: 10px 0;
-    text-align: center;
+    .loadingPage_logo{
+      width: $full /3
+    }
+    .loadingPage_text{
+      font-size: $title;
+      text-align: center;
+    }
+    .loadingPage_text-indice{
+      font-size: $regular;
+      margin: 10px 0;
+      text-align: center;
+    }
   }
 }
 

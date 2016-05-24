@@ -10,16 +10,13 @@
 @import "colors";
 @import "mediaqueries";
 @import "loadingpage";
+@import "inputstyle";
 @import url(https://fonts.googleapis.com/css?family=Exo:400,700);
 
 // Font à appliquer sur toute la page
-a{
+a, a:hover, a:after{
   color: white;
   text-decoration: none;
-  &:hover{
-    color: white;
-    text-decoration: none;
-  }
 }
 body{
   font-family: $main;
@@ -34,19 +31,26 @@ body{
 
 // Positionnement et taille de font du header
 header{
+  height: 15vh;
+  position: relative;
   @include container-center-row;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px;
-// Propriétés  du texte du header
-  .header_title{
-    font-size: $title;
-    margin-bottom: 10px;
-  }
-  // Taille de l'image du header
-  .header_img{
-    width: 100px;
-    margin: 0 10px;
+  // Positionnement du container des elements du header
+  .header_container{
+    @include centerIE;
+    width: 850px;
+    height: 70%;
+    @include container-center-row;
+    align-items: center;
+    flex-wrap: wrap;
+    // Taille de l'image du header
+    .header_img{
+      margin: 0 10px;
+    }
+    // Taille du texte du header
+    .header_title{
+      font-size: $title;
+      margin-bottom: 2%;
+    }
   }
 }
 // Propriétés de la navbar
@@ -76,18 +80,27 @@ header{
 // Propriétés du contenu principal:
 main{
   padding: 3%;
-  .container{
+  .container, .carousel-inner, .slide_content, .item{
     height: $slider-height;
+    padding: 0;
     .carousel-inner{
       background: rgba(0,0,0,0.7);
-      height: $slider-height;
-      .slide_content{
-        height: $slider-height;
+      .item{
         width: $full;
-        text-align: center;
+      }
+      .item-1{
+        background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center / cover;
+      }
+      .item-3{
+        background-color: white;
+        padding: 10% 0;
+        position: relative;
+        .slide_content{
+          height: $full;
+          @include centerIE;
+        }
       }
     }
-
   }
 }
 .row{

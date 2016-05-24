@@ -12,9 +12,6 @@ $(document).ready(function(){
     $(".item3").click(function(){
         $("#myCarousel").carousel(2);
     });
-    $(".item4").click(function(){
-        $("#myCarousel").carousel(3);
-    });
 
     // Enable Carousel Controls
     $(".left").click(function(){

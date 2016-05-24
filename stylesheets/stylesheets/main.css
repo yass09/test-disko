@@ -96,25 +96,35 @@ body {
     text-align: center;
   }
 
-  /* line 7, ../sass/_mediaqueries.scss */
+  /* line 6, ../sass/_mediaqueries.scss */
+  .header_img {
+    width: 70px;
+  }
+
+  /* line 9, ../sass/_mediaqueries.scss */
+  .header_titleContainer {
+    display: none;
+  }
+
+  /* line 12, ../sass/_mediaqueries.scss */
   .menu_itemsContainer {
     display: none;
   }
 
-  /* line 10, ../sass/_mediaqueries.scss */
+  /* line 15, ../sass/_mediaqueries.scss */
   .menu_mobile {
     width: 100%;
     transition: all 0.5s ease;
   }
 
-  /* line 14, ../sass/_mediaqueries.scss */
+  /* line 19, ../sass/_mediaqueries.scss */
   .menu_item-mobile {
     height: 0;
     opacity: 0;
     transition: all 0.5s ease;
   }
 
-  /* line 20, ../sass/_mediaqueries.scss */
+  /* line 25, ../sass/_mediaqueries.scss */
   .menu_item-mobile-open {
     opacity: 1;
     height: 25px;
@@ -123,38 +133,53 @@ body {
     transition: all 0.5s ease-in-out;
   }
 
-  /* line 28, ../sass/_mediaqueries.scss */
+  /* line 33, ../sass/_mediaqueries.scss */
   .footer_contentDivs {
     width: 100%;
   }
-
-  /* line 31, ../sass/_mediaqueries.scss */
-  .footer_contentText {
+  /* line 35, ../sass/_mediaqueries.scss */
+  .footer_contentDivs .footer_contentText {
     float: none;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 40, ../sass/_mediaqueries.scss */
+  /* line 45, ../sass/_mediaqueries.scss */
+  .header_titleContainer {
+    float: right;
+    padding: 20px 0;
+  }
+
+  /* line 49, ../sass/_mediaqueries.scss */
+  .header_img {
+    width: 100px;
+  }
+
+  /* line 52, ../sass/_mediaqueries.scss */
+  .header_title {
+    font-size: 2em;
+  }
+
+  /* line 55, ../sass/_mediaqueries.scss */
   .menu_mobile {
     display: none !important;
   }
 
-  /* line 43, ../sass/_mediaqueries.scss */
+  /* line 58, ../sass/_mediaqueries.scss */
   .menu_item {
     display: inline;
   }
 
-  /* line 46, ../sass/_mediaqueries.scss */
+  /* line 61, ../sass/_mediaqueries.scss */
   .footer_contentDivs {
     width: 50%;
   }
 
-  /* line 49, ../sass/_mediaqueries.scss */
+  /* line 64, ../sass/_mediaqueries.scss */
   .footer_contentImg {
     float: left;
   }
 
-  /* line 52, ../sass/_mediaqueries.scss */
+  /* line 67, ../sass/_mediaqueries.scss */
   .footer_contentText {
     float: right;
   }
@@ -163,168 +188,334 @@ body {
 .loadingPage {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   background-color: grey;
+  position: relative;
 }
 /* line 6, ../sass/_loadingpage.scss */
-.loadingPage .loadingPage_text {
+.loadingPage .loadingPage_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 9, ../sass/_loadingpage.scss */
+.loadingPage .loadingPage_content .loadingPage_logo {
+  width: 33.33333%;
+}
+/* line 12, ../sass/_loadingpage.scss */
+.loadingPage .loadingPage_content .loadingPage_text {
   font-size: 2em;
   text-align: center;
 }
-/* line 10, ../sass/_loadingpage.scss */
-.loadingPage .loadingPage_text-indice {
+/* line 16, ../sass/_loadingpage.scss */
+.loadingPage .loadingPage_content .loadingPage_text-indice {
   font-size: 1em;
   margin: 10px 0;
   text-align: center;
 }
 
-/* line 17, ../sass/_loadingpage.scss */
+/* line 24, ../sass/_loadingpage.scss */
 .ryuImg_container-hidden {
   display: none;
 }
 
-/* line 21, ../sass/_loadingpage.scss */
+/* line 28, ../sass/_loadingpage.scss */
 .ryuImg_container {
   width: 100%;
   height: 100vh;
 }
-/* line 23, ../sass/_loadingpage.scss */
+/* line 30, ../sass/_loadingpage.scss */
 .ryuImg_container .ryuImg {
   width: 100%;
   height: 100vh;
 }
 
-/* line 16, ../sass/main.scss */
-a {
-  color: white;
-  text-decoration: none;
+/* line 1, ../sass/_inputStyle.scss */
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 350px;
+  width: calc(100% - 2em);
+  vertical-align: middle;
 }
-/* line 19, ../sass/main.scss */
-a:hover {
+
+/* line 10, ../sass/_inputStyle.scss */
+.input__field--minoru {
+  width: 100%;
+  background: #ff f;
+  box-shadow: 0px 0px 0px 2px transparent;
+  color: #8A9ED8;
+  transition: box-shadow 0.3s;
+}
+
+/* line 18, ../sass/_inputStyle.scss */
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+  z-index: 10;
+  width: 100%;
+  background: transparent;
+  color: #f5f5f5;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* line 37, ../sass/_inputStyle.scss */
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 90.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* line 51, ../sass/_inputStyle.scss */
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+
+/* line 57, ../sass/_inputStyle.scss */
+.input__field:focus {
+  outline: none;
+}
+
+/* line 61, ../sass/_inputStyle.scss */
+.input__label--yoko {
+  position: relative;
+  width: 100%;
+  color: #D0D6D6;
+  text-align: left;
+}
+
+/* line 68, ../sass/_inputStyle.scss */
+.input__label--yoko::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #8A9ED8;
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform-origin: 50% 100%;
+  transition: transform 0.3s;
+}
+
+/* line 81, ../sass/_inputStyle.scss */
+.input__label--yoko::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25em;
+  background: #D0D6D6;
+  transform-origin: 50% 0%;
+  transition: transform 0.3s;
+}
+
+/* line 93, ../sass/_inputStyle.scss */
+.input__label-content--yoko {
+  padding: 0.75em 0;
+}
+
+/* line 97, ../sass/_inputStyle.scss */
+.input__field--yoko:focus,
+.input--filled .input__field--yoko {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* line 103, ../sass/_inputStyle.scss */
+.input__field--yoko:focus + .input__label--yoko::before,
+.input--filled .input__label--yoko::before {
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+}
+
+/* line 108, ../sass/_inputStyle.scss */
+.input__field--yoko:focus + .input__label--yoko,
+.input--filled .input__label--yoko {
+  pointer-events: none;
+}
+
+/* line 113, ../sass/_inputStyle.scss */
+.input__field--yoko:focus + .input__label--yoko::after,
+.input--filled .input__label--yoko::after {
+  transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+}
+
+/* line 17, ../sass/main.scss */
+a, a:hover, a:after {
   color: white;
   text-decoration: none;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 body {
   font-family: "Exo";
 }
 
-/* line 27, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 .loadingPage_logo {
   width: 20%;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 .content {
   display: none;
 }
 
-/* line 36, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 header {
+  height: 15vh;
+  position: relative;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+}
+/* line 38, ../sass/main.scss */
+header .header_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  height: 70%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
+  flex-wrap: wrap;
 }
-/* line 42, ../sass/main.scss */
-header .header_title {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-/* line 47, ../sass/main.scss */
-header .header_img {
-  width: 100px;
+/* line 46, ../sass/main.scss */
+header .header_container .header_img {
   margin: 0 10px;
 }
+/* line 50, ../sass/main.scss */
+header .header_container .header_title {
+  font-size: 2em;
+  margin-bottom: 2%;
+}
 
-/* line 53, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 .menu {
   width: 100%;
   padding: 10px 0;
 }
-/* line 56, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .menu .menu_itemsContainer {
   text-align: center;
 }
-/* line 59, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 .menu .menu_mobile {
   text-align: center;
   position: relative;
 }
-/* line 62, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .menu .menu_mobile .menu_mobileIcon {
   font-size: 1.5em;
 }
 
-/* line 68, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 .menu_item {
   padding: 0 10px;
   border-right: 1px solid white;
 }
 
-/* line 72, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 .menu_item:last-of-type {
   border: none;
 }
 
-/* line 77, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 main {
   padding: 3%;
 }
-/* line 79, ../sass/main.scss */
-main .container {
+/* line 83, ../sass/main.scss */
+main .container, main .carousel-inner, main .slide_content, main .item {
   height: 50vh;
+  padding: 0;
 }
-/* line 81, ../sass/main.scss */
-main .container .carousel-inner {
+/* line 86, ../sass/main.scss */
+main .container .carousel-inner, main .carousel-inner .carousel-inner, main .slide_content .carousel-inner, main .item .carousel-inner {
   background: rgba(0, 0, 0, 0.7);
-  height: 50vh;
 }
-/* line 84, ../sass/main.scss */
-main .container .carousel-inner .slide_content {
-  height: 50vh;
+/* line 88, ../sass/main.scss */
+main .container .carousel-inner .item, main .carousel-inner .carousel-inner .item, main .slide_content .carousel-inner .item, main .item .carousel-inner .item {
   width: 100%;
-  text-align: center;
+}
+/* line 91, ../sass/main.scss */
+main .container .carousel-inner .item-1, main .carousel-inner .carousel-inner .item-1, main .slide_content .carousel-inner .item-1, main .item .carousel-inner .item-1 {
+  background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
+}
+/* line 94, ../sass/main.scss */
+main .container .carousel-inner .item-3, main .carousel-inner .carousel-inner .item-3, main .slide_content .carousel-inner .item-3, main .item .carousel-inner .item-3 {
+  background-color: white;
+  padding: 10% 0;
+  position: relative;
+}
+/* line 98, ../sass/main.scss */
+main .container .carousel-inner .item-3 .slide_content, main .carousel-inner .carousel-inner .item-3 .slide_content, main .slide_content .carousel-inner .item-3 .slide_content, main .item .carousel-inner .item-3 .slide_content {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* line 93, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 .row {
   margin: 0;
 }
 
-/* line 98, ../sass/main.scss */
+/* line 111, ../sass/main.scss */
 footer {
   width: 100%;
 }
-/* line 100, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 footer .footer_header {
   width: 100%;
 }
-/* line 102, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 footer .footer_header .footer_headerText {
   font-size: 0.66667em;
   padding: 5px;
   text-align: center;
 }
-/* line 108, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 footer .footer_content {
   width: 100%;
 }
-/* line 110, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 footer .footer_content .footer_contentImg {
   background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
   height: 250px;
 }
-/* line 114, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 footer .footer_content .footer_contentText {
   padding: 20px;
 }
-/* line 116, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 footer .footer_content .footer_contentText .footer_contentTitle {
   margin-bottom: 10px;
   font-size: 1.33333em;
