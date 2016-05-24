@@ -76,6 +76,9 @@ header{
 // Propriétés du contenu principal:
 main{
   padding: 3%;
+  .row{
+  // margin: 0;
+  }
   .container{
     height: $slider-height;
     .carousel-inner{
@@ -83,6 +86,7 @@ main{
       .slide_content{
         height: $slider-height;
         width: $full;
+        text-align: center;
       }
     }
 
@@ -92,17 +96,22 @@ main{
 
 footer{
   width: $full;
-  @include container-center-column;
   .footer_header{
     width: $full;
-    @include container-center-row;
     .footer_headerText{
       font-size: $regular / 1.5;
       padding: 5px;
+      text-align: center;
     }
   }
   .footer_content{
-    height: 200px;
-    background-color: red;
+    width: $full;
+    .footer_contentText{
+      text-align: left;
+      padding: 30px;
+      .footer_contentTitle{
+
+      }
+    }
   }
 }

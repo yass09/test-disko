@@ -25,7 +25,14 @@
     width: $full;
     transition: all 0.5s ease-in-out;
   }
+  .footer_contentDivs{
+    width: $full;
+  }
+  .footer_contentText{
+      float: none;
+  }
 }
+
 
 
 // Sur ecran > tablette 768px
@@ -35,5 +42,16 @@
   }
   .menu_item{
     display:inline;
+  }
+  .footer_contentDivs{
+    width: $full/2;
+  }
+  .footer_contentText{
+      float: right;
+      .footer_contentTitle{
+        text-decoration: underline;
+        margin-bottom: 10px;
+        font-size: $title / 1.5;
+      }
   }
 }
