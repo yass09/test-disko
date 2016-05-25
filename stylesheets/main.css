@@ -516,7 +516,7 @@ main .item {
 }
 /* line 93, ../sass/main.scss */
 main .item-1 {
-  background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
+  background: url(../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
 }
 /* line 96, ../sass/main.scss */
 main .item-2_content, main .item-3_content {
@@ -553,7 +553,7 @@ footer .footer_content {
 }
 /* line 118, ../sass/main.scss */
 footer .footer_content .footer_contentImg {
-  background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
+  background: url(../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
   height: 30vh;
 }
 /* line 122, ../sass/main.scss */

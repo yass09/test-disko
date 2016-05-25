@@ -225,8 +225,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -316,9 +314,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -352,14 +347,9 @@ body {
   width: 100%;
   height: 4em;
   background: #8A9ED8;
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
   transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
-  -webkit-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* line 81, ../sass/_inputStyle.scss */
@@ -371,12 +361,8 @@ body {
   width: 100%;
   height: 0.25em;
   background: #D0D6D6;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* line 93, ../sass/_inputStyle.scss */
@@ -394,7 +380,6 @@ body {
 /* line 103, ../sass/_inputStyle.scss */
 .input__field:focus + .input__label::before,
 .input--filled .input__label::before {
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
   transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
 }
 
@@ -407,7 +392,6 @@ body {
 /* line 113, ../sass/_inputStyle.scss */
 .input__field:focus + .input__label::after,
 .input--filled .input__label::after {
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
   transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
 }
 
@@ -431,11 +415,7 @@ body {
 header {
   height: 15vh;
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 /* line 37, ../sass/main.scss */
@@ -443,21 +423,11 @@ header .header_container {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 70%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 /* line 45, ../sass/main.scss */
@@ -516,15 +486,13 @@ main .item {
 }
 /* line 93, ../sass/main.scss */
 main .item-1 {
-  background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
+  background: url(../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
 }
 /* line 96, ../sass/main.scss */
 main .item-2_content, main .item-3_content {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -553,7 +521,7 @@ footer .footer_content {
 }
 /* line 118, ../sass/main.scss */
 footer .footer_content .footer_contentImg {
-  background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
+  background: url(../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
   height: 30vh;
 }
 /* line 122, ../sass/main.scss */

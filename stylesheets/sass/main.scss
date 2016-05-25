@@ -91,7 +91,7 @@ main{
   }
   // Image de fond du premier slide
   .item-1{
-    background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center / cover;
+    background: url(../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center / cover;
   }
   .item-2_content, .item-3_content{
     @include centerIE;
@@ -116,7 +116,7 @@ footer{
   .footer_content{
     width: $full;
     .footer_contentImg{
-      background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top / cover;
+      background: url(../img/635977562108560005-679443365_kobe.jpg) no-repeat top / cover;
       height: 30vh;
     }
     .footer_contentText{
