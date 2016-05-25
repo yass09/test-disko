@@ -32,10 +32,13 @@ body{
 // Positionnement et taille de font du header
 header{
   height: 15vh;
+  // IE 9 fallback
   position: relative;
+  // Flexbox pour les browsers modernes
   @include container-center-row;
   // Positionnement du container des elements du header
   .header_container{
+  // IE 9 fallback
     @include centerIE;
     width: 850px;
     height: 70%;
@@ -80,28 +83,24 @@ header{
 // Propriétés du contenu principal:
 main{
   padding: 3%;
+  // Chaque container et element est mis a la meme hauteur
   .container, .carousel-inner, .slide_content, .item{
     height: $slider-height;
     padding: 0;
-    .carousel-inner{
-      background: rgba(0,0,0,0.7);
-      .item{
-        width: $full;
-      }
-      .item-1{
-        background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center / cover;
-      }
-      .item-3{
-        background-color: white;
-        padding: 10% 0;
-        position: relative;
-        .slide_content{
-          height: $full;
-          @include centerIE;
-        }
-      }
-    }
   }
+  // Largeur de tous les slide à 100% de leur container
+  .item{
+    width: $full;
+    position: relative;
+  }
+  // Image de fond du premier slide
+  .item-1{
+    background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center / cover;
+  }
+  .item-2_content, .item-3_content{
+    @include centerIE;
+  }
+
 }
 .row{
 margin: 0;

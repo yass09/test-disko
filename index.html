@@ -20,10 +20,6 @@
     <script type="text/javascript" src="node_modules/jquery.konami/src/jquery.konami.min.js"></script>
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="vendor/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
-    <!-- Custom JS -->
-    <script type="text/javascript" src="js/loadingPage.js"></script>
-    <script type="text/javascript" src="js/burgermenu.js"></script>
-    <script type="text/javascript" src="js/carousel-slider.js">   </script>
 
     <title>Test Frontend Disko</title>
 
@@ -31,23 +27,23 @@
 
   <body>
 <!-- Loading page div qui apparait avant le chargement de la maquette -->
-  <!-- <div class="loadingPage">
+  <div class="loadingPage">
     <div class="loadingPage_content">
       <img class="loadingPage_logo" src="img/logo_diskoEDIT.png" alt="logo agence Diko" />
       <p class="loadingPage_text">Pour entrer, un indice: "Hadoken!".</p>
       <audio id="SF2" src="src/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3" type="audio/mpeg"></audio>
     </div>
-  </div> -->
+  </div>
   <!-- 2eme partie de la loading page contenant le gif animé -->
-  <!-- <div id="ryu-gif-container" class="ryuImg_container-hidden">
+  <div id="ryu-gif-container" class="ryuImg_container-hidden">
     <img class="ryuImg" src="img/supersfiiopryub.gif" alt="gif animé Ryu" />
-  </div> -->
+  </div>
   <!-- Div contenant la page principal à afficher apres l'animation de la loading page -->
-  <!-- <div class="content"> -->
+  <div id="mainPage" class="content">
 <!-- En-tête avec le logo et le titre de la page -->
     <header>
       <div class="header_container">
-        <a href="#"><img class="header_img" src="img/logo_diskoEDIT.png" alt="logo Disko homepage" /></a>
+        <img class="header_img" src="img/logo_diskoEDIT.png" alt="logo Disko homepage" />
         <div class="header_titleContainer">
           <p class="header_title">Bienvenue sur ma version du test Frontend Disko</p>
           <p class="header_subTitle">Par Yacine Chibane-De Jésus</p>
@@ -72,8 +68,10 @@
         <li class="menu_item">Slide 3</li>
       </ul>
     </nav>
-    <!-- Contenu Principal, Container du slider avec le Canvas, formulaire et profil  -->
+    <!-- Contenu Principal, Container du slider avec le Canvas, formulaire et profil -->
     <main class="row">
+      <audio src="src/8d82b5_Street_Fighter_Tatsumaki_Senpuu_Kyaku_Sound_Effect.mp3" id="SF2-2"></audio>
+      <!-- Slider (source bootstrap) -->
       <div class="container col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
         <div id="myCarousel" class="carousel slide">
           <!-- Items indiquant quels slides afficher -->
@@ -91,20 +89,20 @@
               <!-- Text affiché sur le premier slide -->
               <div class="carousel-caption">
                 <h3>MJ</h3><br>
-                <p>Voici une belle photo parce qu'il faut en mettre une, et qu'elle illustre certaines de mes passions</p>
+                <p>Voici une belle photo qui illustre certaines de mes passions</p>
               </div>
             </div>
-
+<!-- Canvas dessinant un orloge fonctionnelle (source w3 Schools)-->
             <div class="item item-2">
-              <canvas id="canvas" class="slide_content"></canvas>
+              <canvas id="canvas" class="item-2_content" width="300" height="300"></canvas>
             </div>
-
+<!-- Input stylisé (source Codrops) -->
             <div class="item item-3">
-              <div class="slide_content">
+              <div class="item-3_content">
                 <span class="input input--minoru">
-        					<input class="input__field input__field--yoko" type="text" id="input-16" />
-        					<label class="input__label input__label--yoko" for="input-16">
-        						<span class="input__label-content input__label-content--yoko">Votre texte</span>
+        					<input class="input__field input__field" type="text" id="input-16" />
+        					<label class="input__label input__label" for="input-16">
+        						<span class="input__label-content input__label-content">Votre texte</span>
         					</label>
         				</span>
               </div>
@@ -127,7 +125,7 @@
     <footer>
       <!-- Entete du Footer (bande noir avec texte blanc) -->
       <div class="footer_header">
-        <p class="footer_headerText">&#169; YCDJ. mon Linked et mon github se cachent derrière d'autres KONAMI CODES.</p>
+        <p class="footer_headerText">&#169; YCDJ. le code source de cette page se cache derrière un autre KONAMI CODE.</p>
       </div>
       <!-- Container de l'image et du texte -->
       <div class="footer_content">
@@ -142,5 +140,11 @@
       </div>
     </footer>
     </div>
+  <!-- Custom JS -->
+  <script type="text/javascript" src="js/loadingPage.js"></script>
+  <script type="text/javascript" src="js/burgermenu.js"></script>
+  <script type="text/javascript" src="js/carousel-slider.js"></script>
+  <script type="text/javascript" src="js/konamiBonus.js"></script>
+  <script type="text/javascript" src="js/canvas.js"></script>
   </body>
 </html>

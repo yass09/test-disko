@@ -1,5 +1,6 @@
 @import "compass/css3";
 
+// Display Flex Mixins
 @mixin container-center-column {
   display: flex;
   justify-content: center;
@@ -12,10 +13,13 @@
   justify-content: center;
 }
 
+// Pour qu'un element prenne tout l'espace
 @mixin full {
   width: $full;
   height: $full-height;
 }
+
+// mixin permettant de centrer pour IE9
 @mixin centerIE {
   position: absolute;
   top: 50%;

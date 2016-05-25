@@ -9,12 +9,21 @@ body{
 .menu{
   color: white;
   background-color: black;
-  &:hover{
-    // background-color: lightgrey;
-  }
+}
+.carousel-inner{
+  background: rgba(0,0,0,0.7);
+}
+.item-2, .item-3{
+  background-color: white;
+}
+.item-2_content{
+  background-color:black;
 }
 
 .footer_header{
   background-color: black;
   color: white;
+  &:hover{
+    background-color: #DD6C6C;
+  }
 }

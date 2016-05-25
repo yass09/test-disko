@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    // Activate Carousel
+    // Active le Carousel
     $("#myCarousel").carousel();
 
-    // Enable Carousel Indicators
+    // Active les indicateurs de slide du Carousel
     $(".item1").click(function(){
         $("#myCarousel").carousel(0);
     });
@@ -13,7 +13,7 @@ $(document).ready(function(){
         $("#myCarousel").carousel(2);
     });
 
-    // Enable Carousel Controls
+    // Active les fleches permettant de naviguer entre les slides
     $(".left").click(function(){
         $("#myCarousel").carousel("prev");
     });

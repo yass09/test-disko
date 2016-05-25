@@ -1,15 +1,16 @@
 //Chargement de l'animation jquery de la loading/konami page
 $(document).ready(function(){
-  var $audio = $('audio'),
+  var $audio = $('#SF2'),
   // Fonction pour lancer l'audio
       playSound = function () {
-        if ($audio.hasClass("played")){
+        if (!$audio.hasClass("played")){
           $audio[0].play();
           $audio.addClass("played");
         }
       },
       screenHeight = $(window).height(),
       screenWidth = $(window).width(),
+
 
 // fonctions pour faire apparaître les instructions sur desktop
       addTextDesktop = function () {
@@ -27,7 +28,6 @@ $(document).ready(function(){
 // SetTimeout faisant apparaitre les instructions
   setTimeout(addTextDesktop,5000);
   setTimeout(addTextMobile,5000);
-  // Variable pour appeler le fichier audio,
 
       // Fonctions concernant l'animation
     var fadeGif = function () {
@@ -48,12 +48,12 @@ $(document).ready(function(){
         onPatternMatch: function (e,data){
           $(".loadingPage").fadeOut("fast").promise().done(ryuAnimation);
           console.log("keys pressed: " + event.which);
+    // Variable pour appeler le fichier audio,
           }
         };
 
   // Initialisation du Konami code et alternative par click
     $(document).konami(options).click(function () {
-        $(".loadingPage").fadeOut("fast").promise().done(ryuAnimation);
-
+      $(".loadingPage").fadeOut("fast").promise().done(ryuAnimation);
     });
   });
