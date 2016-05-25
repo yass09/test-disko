@@ -110,40 +110,45 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 3, ../sass/_mediaqueries.scss */
+  /* line 4, ../sass/_mediaqueries.scss */
   .header_img {
     height: 12vh;
   }
 
-  /* line 6, ../sass/_mediaqueries.scss */
+  /* line 7, ../sass/_mediaqueries.scss */
+  .header_container {
+    width: 100%;
+  }
+
+  /* line 11, ../sass/_mediaqueries.scss */
   .header_titleContainer {
     display: none;
   }
 
-  /* line 9, ../sass/_mediaqueries.scss */
+  /* line 15, ../sass/_mediaqueries.scss */
   .menu:hover {
     background-color: black;
   }
 
-  /* line 12, ../sass/_mediaqueries.scss */
+  /* line 19, ../sass/_mediaqueries.scss */
   .menu_itemsContainer {
     display: none;
   }
 
-  /* line 15, ../sass/_mediaqueries.scss */
+  /* line 23, ../sass/_mediaqueries.scss */
   .menu_mobile {
     width: 100%;
     transition: all 0.5s ease;
   }
 
-  /* line 19, ../sass/_mediaqueries.scss */
+  /* line 27, ../sass/_mediaqueries.scss */
   .menu_item-mobile {
     height: 0;
     opacity: 0;
     transition: all 0.5s ease;
   }
 
-  /* line 24, ../sass/_mediaqueries.scss */
+  /* line 32, ../sass/_mediaqueries.scss */
   .menu_item-mobile-open {
     opacity: 1;
     height: 25px;
@@ -152,58 +157,53 @@ body {
     transition: all 0.5s ease-in-out;
   }
 
-  /* line 32, ../sass/_mediaqueries.scss */
+  /* line 41, ../sass/_mediaqueries.scss */
   .footer_contentDivs {
     width: 100%;
   }
-  /* line 34, ../sass/_mediaqueries.scss */
+  /* line 43, ../sass/_mediaqueries.scss */
   .footer_contentDivs .footer_contentText {
     float: none;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 44, ../sass/_mediaqueries.scss */
+  /* line 54, ../sass/_mediaqueries.scss */
   .header_titleContainer {
     float: right;
     padding: 20px 0;
   }
 
-  /* line 48, ../sass/_mediaqueries.scss */
+  /* line 59, ../sass/_mediaqueries.scss */
   .header_img {
     width: 100px;
   }
 
-  /* line 51, ../sass/_mediaqueries.scss */
-  .header_title {
-    font-size: 2em;
+  /* line 62, ../sass/_mediaqueries.scss */
+  .header_container {
+    width: 850px;
   }
 
-  /* line 54, ../sass/_mediaqueries.scss */
+  /* line 65, ../sass/_mediaqueries.scss */
   .menu:hover {
     background-color: lightgrey;
   }
 
-  /* line 57, ../sass/_mediaqueries.scss */
+  /* line 69, ../sass/_mediaqueries.scss */
   .menu_mobile {
     display: none !important;
   }
 
-  /* line 60, ../sass/_mediaqueries.scss */
+  /* line 72, ../sass/_mediaqueries.scss */
   .menu_item {
     display: inline;
   }
 
-  /* line 63, ../sass/_mediaqueries.scss */
+  /* line 76, ../sass/_mediaqueries.scss */
   .footer_contentDivs {
     width: 50%;
   }
 
-  /* line 66, ../sass/_mediaqueries.scss */
-  .footer_contentImg {
-    float: left;
-  }
-
-  /* line 69, ../sass/_mediaqueries.scss */
+  /* line 79, ../sass/_mediaqueries.scss */
   .footer_contentText {
     float: right;
   }
@@ -225,7 +225,7 @@ body {
 }
 /* line 9, ../sass/_loadingpage.scss */
 .loadingPage .loadingPage_content .loadingPage_logo {
-  width: 33.33333%;
+  width: 40%;
 }
 /* line 12, ../sass/_loadingpage.scss */
 .loadingPage .loadingPage_content .loadingPage_text {
@@ -401,95 +401,89 @@ body {
   font-family: "Exo";
 }
 
-/* line 24, ../sass/main.scss */
-.loadingPage_logo {
-  width: 20%;
-}
-
-/* line 28, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 .content {
   display: none;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 header {
   height: 15vh;
   position: relative;
   display: flex;
   justify-content: center;
 }
-/* line 40, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 header .header_container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 850px;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 49, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 header .header_container .header_img {
   margin: 0 10px;
 }
-/* line 53, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 header .header_container .header_title {
   font-size: 2em;
   margin-bottom: 2%;
 }
 
-/* line 60, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 .menu {
   width: 100%;
   padding: 10px 0;
 }
-/* line 63, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 .menu .menu_itemsContainer {
   text-align: center;
 }
-/* line 66, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .menu .menu_mobile {
   text-align: center;
   position: relative;
 }
-/* line 69, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .menu .menu_mobile .menu_mobileIcon {
   font-size: 1.5em;
 }
 
-/* line 75, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .menu_item {
   padding: 0 10px;
   border-right: 1px solid white;
 }
 
-/* line 79, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .menu_item:last-of-type {
   border: none;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 80, ../sass/main.scss */
 main {
   padding: 3%;
 }
-/* line 87, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 main .container, main .carousel-inner, main .slide_content, main .item {
   height: 50vh;
   padding: 0;
 }
-/* line 92, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 main .item {
   width: 100%;
   position: relative;
 }
-/* line 97, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 main .item-1 {
   background: url(../../img/jumpman-air-jordan-photo-shoot-poster.jpg) no-repeat center/cover;
 }
-/* line 100, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 main .item-2_content, main .item-3_content {
   position: absolute;
   top: 50%;
@@ -497,39 +491,39 @@ main .item-2_content, main .item-3_content {
   transform: translate(-50%, -50%);
 }
 
-/* line 105, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 .row {
   margin: 0;
 }
 
-/* line 110, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 footer {
   width: 100%;
 }
-/* line 112, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 footer .footer_header {
   width: 100%;
 }
-/* line 114, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 footer .footer_header .footer_headerText {
   font-size: 0.66667em;
   padding: 5px;
   text-align: center;
 }
-/* line 120, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 footer .footer_content {
   width: 100%;
 }
-/* line 122, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 footer .footer_content .footer_contentImg {
   background: url(../../img/635977562108560005-679443365_kobe.jpg) no-repeat top/cover;
   height: 250px;
 }
-/* line 126, ../sass/main.scss */
+/* line 122, ../sass/main.scss */
 footer .footer_content .footer_contentText {
   padding: 20px;
 }
-/* line 128, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 footer .footer_content .footer_contentText .footer_contentTitle {
   margin-bottom: 10px;
   font-size: 1.33333em;

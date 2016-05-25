@@ -21,9 +21,6 @@ a, a:hover, a:after{
 body{
   font-family: $main;
 }
-.loadingPage_logo{
-  width: 20%;
-}
 
 .content{
   display: none;
@@ -40,7 +37,6 @@ header{
   .header_container{
   // IE 9 fallback
     @include centerIE;
-    width: 850px;
     height: 70%;
     @include container-center-row;
     align-items: center;

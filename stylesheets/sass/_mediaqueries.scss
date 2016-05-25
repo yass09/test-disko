@@ -4,6 +4,9 @@
   .header_img{
     height: 12vh;
   }
+  .header_container{
+    width: 100%;
+  }
   // Masque le titre de la page
   .header_titleContainer{
     display: none;
@@ -55,6 +58,9 @@
   // defini la taille du logo sur desktop
   .header_img{
     width: 100px;
+  }
+  .header_container{
+    width: 850px;
   }
   .menu:hover{
     background-color: lightgrey;
